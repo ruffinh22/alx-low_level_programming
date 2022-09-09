@@ -17,14 +17,14 @@ int main(void)
 	while (x <= 'z')
 	{
 		putchar(x);
-		++ch;
+		++x;
 	}
 
 	/*print A - Z*/
 	while (X <= 'Z')
 	{
 		putchar(X);
-		++CH;
+		++X;
 	}
 	putchar('\n');
 
