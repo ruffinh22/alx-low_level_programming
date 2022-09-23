@@ -1,0 +1,25 @@
+{
+  "name": "0x06-pointers_arrays_strings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "commitlint.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "standard-version": "^9.5.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "node-fetch": "^3.2.10",
+    "release": "^6.0.1"
+  }
+}
