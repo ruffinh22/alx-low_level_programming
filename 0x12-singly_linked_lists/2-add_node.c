@@ -1,28 +1,28 @@
 #include "lists.h"
 
 /**
- * add_node - function that adds a node at the begining of a list.
- * @head: current head address
- * @str: pointer to string
- * Return: number of nodes.
+ * add_node - function that adds a new node at the beggining of a linked list
+ * @head: previus node head
+ * @str: string of the new node
+ *
+ * Return: address of the new element
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new_node;
-	size_t nchar;
+	list_t *new;
 
-	new_node = malloc(sizeof(list_t));
-	if (new_node == NULL)
+	if (head == NULL)
+	{
 		return (NULL);
-
-	new_node->str = strdup(str);
-
-	for (nchar = 0; str[nchar]; nchar++)
-		;
-
-	new_node->len = nchar;
-	new_node->next = *head;
-	*head = new_node;
-
-	return (*head);
+	}
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
+	{
+		return (NULL);
+	}
+	new->str = strdup(str);
+	new->len = strlen(str);
+	new->next = *head;
+	*head = new;
+	return (new);
 }
